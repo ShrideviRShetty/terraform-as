@@ -11,6 +11,4 @@ resource "aws_autoscaling_group" "example" {
     value               = "terraform-asg-example"
     propagate_at_launch = true
   }
-
-  depends_on = [aws_lb_target_group.example]
 }
