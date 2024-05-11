@@ -1,5 +1,5 @@
 resource "aws_autoscaling_group" "example" {
-  launch_configuration = aws_launch_configuration.example.name
+  launch_template      = aws_launch_template.example.name
   min_size             = 2
   max_size             = 3
   desired_capacity     = 2
