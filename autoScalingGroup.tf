@@ -1,5 +1,8 @@
 resource "aws_autoscaling_group" "example" {
-  launch_template      = aws_launch_template.example.name
+   launch_template {
+    name    = aws_launch_template.example.name
+    version = "$Latest"
+  }
   min_size             = 2
   max_size             = 3
   desired_capacity     = 2
